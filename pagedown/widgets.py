@@ -36,6 +36,7 @@ class PagedownWidget(forms.Textarea):
                 "all": self.css
             },
             js=(
+                compatible_staticpath('admin/js/jquery.init.js'),
                 compatible_staticpath("pagedown/Markdown.Converter.js"),
                 compatible_staticpath(
                     "pagedown-extra/pagedown/Markdown.Converter.js"),
@@ -89,6 +90,7 @@ class AdminPagedownWidget(PagedownWidget, admin_widgets.AdminTextareaWidget):
                 "all": (compatible_staticpath("admin/css/pagedown.css"),)
             },
             js=(
+                compatible_staticpath('admin/js/jquery.init.js'),
                 compatible_staticpath("admin/js/pagedown.js"),
             ))
 
